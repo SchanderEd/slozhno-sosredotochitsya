@@ -42,6 +42,12 @@ function css() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+function js() {
+  return gulp.src('src/scripts/**/*.js')
+  .pipe(gulp.dest('dist/scripts'))
+  .pipe(browserSync.reload({ stream: true }));
+}
+
 function images() {
   return gulp.src('src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}')
     .pipe(gulp.dest('dist/images'))
@@ -66,7 +72,9 @@ function clean() {
 
 function watchFiles() {
   gulp.watch(['src/**/*.html'], html);
-  gulp.watch(['src/blocks/**/*.css'], css);
+  gulp.watch(['src/**/*.css'], css);
+  gulp.watch(['src/scripts/**/*.js'], js);
+  gulp.watch(['src/fonts/**/*.{woff, woff2, ttf, eot}'], fonts);
   gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
 }
 
@@ -85,6 +93,7 @@ const build = gulp
       .parallel(
         html,
         css,
+        js,
         images,
         fonts,
         video,
@@ -92,6 +101,7 @@ const build = gulp
 
 exports.html = html;
 exports.css = css;
+exports.js = js;
 exports.images = images;
 exports.fonts = fonts;
 exports.video = video;
