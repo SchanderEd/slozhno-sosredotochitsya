@@ -1,5 +1,12 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--body-bg-color);
+}
+
+.cover__heading {
+  margin: 0;
+  color: var(--color-heading);
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  text-shadow: 4px 4px #FF0070;
 }
