@@ -40,3 +40,7 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+img {
+  width: 100%;
+}

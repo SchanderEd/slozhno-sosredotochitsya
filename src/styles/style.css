@@ -1,12 +1,122 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+body {
+  margin: 0;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: var(--font-size);
+}
+
 .page {
   background-color: var(--body-bg-color);
 }
 
-.cover__heading {
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  min-height: 750px;
+  padding-top: 20px;
+  padding-right: 20px;
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header::after, .header::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.header::after {
+  top: 20px;
+  right: 20px;
+  border-top: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.header::before {
+  bottom: 21px;
+  left: 20px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.rec-decoration {
+  position: absolute;
+  top: 21px;
+  right: 48px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.rec-decoration::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: -21px;
+  bottom: 4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background: var(--accent-color);
+}
+
+.header__theme-menu {
+  grid-column: 3;
+  grid-row: 1;
+  padding-left: 20px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 16px;
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  border: transparent;
+  padding: 0 13px;
+  color: var(--accent-color);
+  font-size: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__heading {
+  grid-column: span 4;
+  grid-row: 2;
+  margin: 0;
+  margin-block-start: 5px;
   color: var(--color-heading);
-  font-family: 'IBM Plex Mono', sans-serif;
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-  text-shadow: 4px 4px #FF0070;
+  text-shadow: 4px 4px var(--accent-color);
+}
+
+.header__descr {
+  grid-column: 3 / span 3;
+  grid-row: 3;
+  justify-self: end;
+  max-width: 491px;
+  margin: 0;
+  margin-block-start: 30px;
+  color: var(--secondary-color);
+  font-weight: 700;
 }

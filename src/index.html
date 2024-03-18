@@ -8,44 +8,49 @@
   <meta name="color-scheme" content="dark light">
 
   <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/dark.css">
   <link rel="stylesheet" href="./styles/light.css">
-  
+
   <link rel="icon" href="./images/favicon.ico" type="image/any">
   <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./images/mobile-icon.png"> 
+  <link rel="apple-touch-icon" href="./images/mobile-icon.png">
 
   <title>Сложно сосредоточиться</title>
 </head>
 
 <body class="page">
-  <header class="header decorated-zone">
-    <nav class="header__theme-menu">
-      <ul class="header__theme-menu-list">
-        <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_type_light">
-            День
-          </button>
-        </li>
-        <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-            disabled>
-            Авто
-          </button>
-        </li>
-        <li class="header__theme-menu-item">
-          <button class="header__theme-menu-button header__theme-menu-button_type_dark">
-            Неон
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div class="wrapper">
+    <header class="header decorated-zone">
+      <nav class="header__theme-menu">
+        <ul class="header__theme-menu-list">
+          <li class="header__theme-menu-item">
+            <button class="header__theme-menu-button header__theme-menu-button_type_light">
+              День
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+              disabled>
+              Авто
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button class="header__theme-menu-button header__theme-menu-button_type_dark">
+              Неон
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <span class="rec-decoration" aria-hidden="true">rec</span>
+      <h1 class="header__heading">no focus</h1>
+      <p class="header__descr title-decor">Что делать, когда не можешь делать ничего
+        Или почему нам так сложно сконцентрироваться, особенно когда очень надо</p>
+    </header>
+  </div>
   <main>
-    <section class="cover">
-      <h1 class="cover__heading">no focus</h1>
-    </section>
   </main>
   <script src="./scripts/script.js"></script>
 </body>
