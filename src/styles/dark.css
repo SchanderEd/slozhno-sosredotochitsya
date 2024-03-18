@@ -5,4 +5,22 @@
   */
   --body-bg-color: #000028;
   --color-heading: #DB00FF;
+  --accent-color: #ff0070;
+  --color-text: #F1B2CE;
+}
+
+.page.theme_dark .header {
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.page.theme_dark .rec-decoration {
+  display: inline;
+}
+
+.page.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button_active {
+  border-color: var(--accent-color);
 }

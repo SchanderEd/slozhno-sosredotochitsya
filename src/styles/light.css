@@ -4,6 +4,15 @@
     --secondary-color: #353430;
     --body-bg-color: #fff;
     --color-heading: #FFC2E6;
+    --color-text: #353430;
+  }
+
+  .header {
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .rec-decoration {
+    display: none;
   }
 }
 
@@ -16,4 +25,20 @@
   --secondary-color: #353430;
   --body-bg-color: #fff;
   --color-heading: #FFC2E6;
+}
+
+.page.theme_light .header {
+  background-image: url(../images/cover-image-light.png);
+}
+
+.page.theme_light .rec-decoration {
+  display: none;
+}
+
+.page.theme_light .header__theme-menu-button {
+  color: var(--secondary-color);
+}
+
+.page.theme_light .header__theme-menu-button_active {
+  border-color: var(--secondary-color);
 }
