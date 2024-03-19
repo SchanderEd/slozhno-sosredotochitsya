@@ -1,6 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 body {
-  margin: 0;
   font-family: 'IBM Plex Mono', sans-serif;
   font-size: var(--fz-sm);
 }
@@ -14,14 +13,13 @@ body {
 }
 
 .header {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   align-items: start;
   gap: 20px;
-  min-height: 750px;
+  min-height: 768px;
   padding-top: 20px;
   padding-right: 20px;
   background-position: top center;
@@ -30,22 +28,26 @@ body {
   background-image: url(../images/cover-image-dark.png);
 }
 
-.header::after, .header::before {
+.decorated-border {
+  position: relative;
+}
+
+.decorated-border::after, .decorated-border::before {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
 }
 
-.header::after {
+.decorated-border::after {
   top: 20px;
   right: 20px;
   border-top: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
 }
 
-.header::before {
-  bottom: 21px;
+.decorated-border::before {
+  bottom: 20px;
   left: 20px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
@@ -80,7 +82,7 @@ body {
 
 .header__theme-menu-list {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -107,7 +109,7 @@ body {
   margin: 0;
   margin-block-start: 5px;
   color: var(--color-heading);
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  font-size: var(--fz-title);
   text-shadow: 4px 4px var(--accent-color);
 }
 
@@ -122,20 +124,45 @@ body {
   font-weight: 700;
 }
 
-.difficult-block {
-  display: grid;
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-bottom: 80px;
+}
+
+.padding-block {
   padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.item-heading {
+  margin: 0;
+  margin-bottom: 11px;
+  font-size: var(--fz-sm);
+  color: var(--secondary-color);
+}
+
+.difficult-block {
+  display: grid;
   gap: 20px;
   grid-template-columns: repeat(6, 1fr);
 }
 
-.difficult-block__heading {
-  grid-column: 1 / span 2;
+.block-heading {
   margin: 0;
   color: var(--accent-color);
   font-size: var(--fz-sm);
+}
+
+.item-text {
+  color: var(--color-text);
+  line-height: 23px;
+}
+
+.difficult-block__heading {
+  grid-column: 1 / span 2;
 }
 
 .difficult-block__list {
@@ -143,20 +170,118 @@ body {
   flex-direction: column;
   gap: 20px;
   grid-column: 3 / span 4;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.difficult-block__item-heading {
-  margin: 0;
-  margin-bottom: 11px;
+.concetration-block {
+  padding-top: 5px;
+}
+
+.concetration-block__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.concetration-block__heading {
+  max-width: 315px;
+  margin-bottom: 20px;
+}
+
+.concetration-block__item {
+  width: 100%;
+}
+
+@media(max-width: 1024px) {
+  .concetration-block__item {
+    max-width: 315px;
+  }
+}
+
+.how-concetration {
+  display: grid;
+  padding-top: 0;
+}
+
+.how-concetration-block {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  padding-top: 5px;
+}
+
+.how-concetration-block__heading {
+  grid-column: 1 / span 2;
+}
+
+.how-concetration-block__list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  grid-column: 3 / span 4;
+}
+
+.how-concetration__list-heading {
   color: var(--secondary-color);
-  font-size: var(--fz-sm);
 }
 
-.difficult-block__text {
+.content-list-heading {
+  margin-bottom: 0px;
+}
+
+.how-concetration__item-heading {
   margin: 0;
-  line-height: 23px;
-  color: var(--color-text);
+  color: var(--secondary-color);
+}
+
+.how-concetration__text {
+  margin: 0;
+}
+
+.gallery {
+  padding-top: 2px;
+}
+
+.gallery__heading {
+  margin-bottom: 20px;
+  font-size: var(--fz-sm);
+  color: var(--secondary-color);
+}
+
+.gallery__img {
+  object-fit: cover;
+}
+
+.gallery__list {
+  display: grid;
+  grid-auto-flow: dense;
+  gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: stretch;
+}
+
+.gallery-grid__big-cell {
+  grid-column: span 8;
+}
+
+.gallery-grid__long-cell {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.gallery-grid__small-cell {
+  grid-column: span 4;
+}
+
+.footer {
+  margin-block-start: 61px;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 768px;
+}
+
+.footer__heading {
+  font-size: var(--fz-title);
+  color: var(--color-heading);
 }

@@ -7,4 +7,5 @@
   --color-heading: #DB00FF;
   --color-text: #F1B2CE;
   --fz-sm: 18px;
+  --fz-title: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
 }
