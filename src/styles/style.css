@@ -191,12 +191,6 @@ body {
   width: 100%;
 }
 
-@media(max-width: 1024px) {
-  .concetration-block__item {
-    max-width: 315px;
-  }
-}
-
 .how-concetration {
   display: grid;
   padding-top: 0;
