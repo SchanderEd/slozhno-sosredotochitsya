@@ -66,3 +66,121 @@
     padding-left: 7px;
   }
 }
+
+@media(max-width: 575px) {
+  .padding-block {
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .rec-decoration {
+    top: 11px;
+    right: 38px;
+  }
+  
+  .decorated-border::after {
+    top: 10px;
+    right: 10px;
+  }
+
+  .decorated-border::before {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .header, .footer {
+    min-height: 668px;
+  }
+
+  .header {
+    padding: 0 9px;
+  }
+
+  .header__descr {
+    max-width: 100%;
+    grid-column: span 5;
+    margin-block-start: 27px;
+  }
+
+  .header__heading {
+    line-height: 82%;
+    margin-block-start: 1px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 50%;
+  }
+
+  .difficult-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .concetration-block {
+    padding-top: 0;
+  }
+
+  .content {
+    gap: 56px;
+    padding-bottom: 50px;
+  }
+
+  .concetration-block__heading {
+    max-width: 100%;
+    margin-bottom: 21px;
+  }
+
+  .concetration-block__list {
+    gap: 25px;
+  }
+
+  .how-concetration-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .how-concetration-block__heading {
+    max-width: 100%;
+  }
+
+  .how-concetration-block__list {
+    padding-left: 0;
+  }
+
+  .how-concetration-block__list {
+    gap: 24px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery {
+    padding-top: 0;
+  }
+
+  .gallery__heading {
+    margin-bottom: 12px;
+  }
+
+  .gallery__list {
+    gap: 10px;
+  }
+
+  .footer {
+    padding-top: 0;
+    margin-block-start: 41px;
+  }
+}
+
+/* 
+
+в padding-block убрать padding-top 
+удалить wrapper
+реализовать ui-kit
+проработать дневную тему
+*/
