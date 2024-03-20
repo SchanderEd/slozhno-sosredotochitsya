@@ -9,10 +9,10 @@
 
   .header__theme-menu {
     grid-column: 5;
+    justify-self: end;
+    align-self: center;
     margin-block-start: 90%;
     padding-left: 0;
-    align-self: center;
-    justify-self: end;
   }
 
   .header__theme-menu-list {
@@ -52,13 +52,13 @@
   }
 
   .how-concetration-block__heading {
-    max-width: 236px;
     width: 100%;
+    max-width: 236px;
   }
 
   .how-concetration-block__list {
-    padding-left: 7px;
     gap: 23px;
+    padding-left: 7px;
   }
 
   .content-list-heading {
@@ -95,14 +95,14 @@
   }
 
   .header__descr {
-    max-width: 100%;
     grid-column: span 5;
+    max-width: 100%;
     margin-block-start: 27px;
   }
 
   .header__heading {
-    line-height: 82%;
     margin-block-start: 1px;
+    line-height: 82%;
   }
 
   .header__theme-menu {
@@ -112,8 +112,8 @@
   .difficult-block {
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
     gap: 20px;
+    padding-top: 40px;
   }
 
   .difficult-block__list {
@@ -149,11 +149,8 @@
   }
 
   .how-concetration-block__list {
-    padding-left: 0;
-  }
-
-  .how-concetration-block__list {
     gap: 24px;
+    padding-left: 0;
   }
 
   .gallery__list {
@@ -171,7 +168,7 @@
   }
 
   .footer {
-    padding-top: 0;
     margin-block-start: 41px;
+    padding-top: 0;
   }
 }
