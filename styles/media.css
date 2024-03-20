@@ -159,6 +159,7 @@
   .gallery__list {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
   .gallery {
@@ -167,10 +168,6 @@
 
   .gallery__heading {
     margin-bottom: 12px;
-  }
-
-  .gallery__list {
-    gap: 10px;
   }
 
   .footer {

@@ -5,6 +5,7 @@ body {
 }
 
 .page {
+  background-attachment: fixed;
   background-color: var(--body-bg-color);
 }
 
