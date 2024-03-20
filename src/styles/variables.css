@@ -1,8 +1,10 @@
 :root {
   --body-bg-color: #000028;
   --accent-color: #ff0070;
+  --accent-color-hover: rgba(255, 0, 112, 0.4);
   --secondary-color: #000028;
   --text-color: #F1B2CE;
+  --link-border-color: #F1B2CE;
   --card-title-color: #000028;
   --color-heading: #DB00FF;
   --color-text: #F1B2CE;

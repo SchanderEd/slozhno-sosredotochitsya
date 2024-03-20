@@ -24,3 +24,11 @@
 .page.theme_dark .header__theme-menu-button_active {
   border-color: var(--accent-color);
 }
+
+.page.theme_dark .item-text {
+  color: var(--color-text);
+}
+
+.page.theme_dark .block-heading {
+  color: var(--accent-color);
+}

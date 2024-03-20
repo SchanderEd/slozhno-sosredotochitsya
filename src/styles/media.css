@@ -1,9 +1,3 @@
-@media(max-width: 1024px) {
-  .concetration-block__item {
-    max-width: 315px;
-  }
-}
-
 @media(max-width: 768px) {
   :root {
     --fz-title: clamp(7.25rem, 6.8766rem + 1.2987vw, 7.5rem);
@@ -64,14 +58,17 @@
 
   .how-concetration-block__list {
     padding-left: 7px;
+    gap: 23px;
+  }
+
+  .content-list-heading {
+    padding-left: 0;
   }
 }
 
 @media(max-width: 575px) {
-  .padding-block {
-    padding-top: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
+  .side-padding {
+    padding: 0 10px;
   }
 
   .rec-decoration {
@@ -115,7 +112,12 @@
   .difficult-block {
     display: flex;
     flex-direction: column;
+    padding-top: 40px;
     gap: 20px;
+  }
+
+  .difficult-block__list {
+    gap: 27px;
   }
 
   .concetration-block {
@@ -133,7 +135,7 @@
   }
 
   .concetration-block__list {
-    gap: 25px;
+    gap: 24px;
   }
 
   .how-concetration-block {
@@ -176,11 +178,3 @@
     margin-block-start: 41px;
   }
 }
-
-/* 
-
-в padding-block убрать padding-top 
-удалить wrapper
-реализовать ui-kit
-проработать дневную тему
-*/

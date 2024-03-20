@@ -12,6 +12,26 @@ body {
   background-color: var(--accent-color);
 }
 
+.text-shadow {
+  text-shadow: 4px 4px var(--accent-color);
+}
+
+.link {
+  outline: none;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: border-color .3s ease-in-out;
+  text-shadow: 3px 2px var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--link-border-color);
+}
+
+.link:focus-visible {
+ border-color: var(--link-border-color);
+}
+
 .header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -82,20 +102,30 @@ body {
 
 .header__theme-menu-list {
   display: flex;
-  gap: 10px;
+  gap: 9px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .header__theme-menu-button {
-  border: transparent;
+  border: 1px solid transparent;
   padding: 0 13px;
   color: var(--accent-color);
   font-size: 18px;
   text-transform: lowercase;
   background-color: transparent;
   cursor: pointer;
+  transition: border-color .3s ease-in-out;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--accent-color-hover);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
@@ -110,7 +140,6 @@ body {
   margin-block-start: 5px;
   color: var(--color-heading);
   font-size: var(--fz-title);
-  text-shadow: 4px 4px var(--accent-color);
 }
 
 .header__descr {
@@ -128,13 +157,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 79px;
 }
 
-.padding-block {
-  padding-top: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
+.side-padding {
+  padding: 0 20px;
 }
 
 .item-heading {
@@ -147,6 +174,7 @@ body {
 .difficult-block {
   display: grid;
   gap: 20px;
+  padding-top: 60px;
   grid-template-columns: repeat(6, 1fr);
 }
 
@@ -168,7 +196,7 @@ body {
 .difficult-block__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
   grid-column: 3 / span 4;
 }
 
@@ -268,7 +296,6 @@ body {
 
 .footer {
   margin-block-start: 61px;
-  padding-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
