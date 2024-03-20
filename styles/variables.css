@@ -1,13 +1,14 @@
 :root {
   --body-bg-color: #000028;
   --accent-color: #ff0070;
-  --accent-color-hover: rgba(255, 0, 112, 0.4);
+  --theme-btn-hover: rgba(255, 0, 112, .4);
   --secondary-color: #000028;
-  --text-color: #F1B2CE;
-  --link-border-color: #F1B2CE;
-  --card-title-color: #000028;
+  --block-heading-color: #FF0070;
+  --theme-btn-color: #ff0070;
   --color-heading: #DB00FF;
   --color-text: #F1B2CE;
   --fz-sm: 18px;
   --fz-title: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  --rec-display: inline;
+  --bg-image: url(../images/cover-image-dark.png);
 }

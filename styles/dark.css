@@ -2,8 +2,11 @@
   --body-bg-color: #000028;
   --color-heading: #DB00FF;
   --accent-color: #ff0070;
+  --theme-btn-color: #ff0070;
+  --theme-btn-hover: rgba(255, 0, 112, .4);
+  --block-heading-color: #FF0070;
   --color-text: #F1B2CE;
   --secondary-color: #000028;
-  --accent-color-hover: rgba(255, 0, 112, 0.4);
-  --link-border-color: #F1B2CE;
+  --rec-display: inline;
+  --bg-image: url(../images/cover-image-dark.png);
 }

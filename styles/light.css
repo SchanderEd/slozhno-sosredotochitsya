@@ -2,16 +2,26 @@
   :root {
     --accent-color: #FF8DCB;
     --secondary-color: #353430;
+    --block-heading-color: #353430;
+    --theme-btn-hover: rgba(50, 49, 45, .4);
     --body-bg-color: #fff;
     --color-heading: #FFC2E6;
-    --accent-color-hover: rgba(50, 49, 45, 0.4);
+    --color-text: #353430;
+    --theme-btn-color: #353430;
+    --rec-display: none;
+    --bg-image: url(../images/cover-image-light.png);
   }
 }
 
 .page.theme_light {
   --accent-color: #FF8DCB;
   --secondary-color: #353430;
+  --color-text: #353430;
   --body-bg-color: #fff;
+  --block-heading-color: #353430;
+  --theme-btn-hover: rgba(50, 49, 45, .4);
   --color-heading: #FFC2E6;
-  --accent-color-hover: #adadab;
+  --theme-btn-color: #353430;
+  --rec-display: none;
+  --bg-image: url(../images/cover-image-light.png);
 }
