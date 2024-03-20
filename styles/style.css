@@ -1,11 +1,14 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 body {
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: var(--fz-sm);
 }
 
 .page {
   background-color: var(--body-bg-color);
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -30,7 +33,7 @@ body {
 }
 
 .link:focus-visible {
- border-color: var(--link-border-color);
+  border-color: var(--link-border-color);
 }
 
 .header {
@@ -40,13 +43,10 @@ body {
   justify-content: center;
   align-items: start;
   gap: 20px;
+  height: 100vh;
   min-height: 768px;
   padding-top: 20px;
   padding-right: 20px;
-  background-image: url(../images/cover-image-dark.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
 }
 
 .decorated-border {
@@ -190,6 +190,10 @@ body {
   line-height: 23px;
 }
 
+.item-text:not(:last-child) {
+  margin: .75em 0;
+}
+
 .difficult-block__heading {
   grid-column: 1 / span 2;
 }
@@ -207,6 +211,7 @@ body {
 
 .concetration-block__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
 }
@@ -217,12 +222,21 @@ body {
 }
 
 .concetration-block__item {
+  flex-grow: 1;
+  flex-basis: 314px;
   width: 100%;
 }
 
 .how-concetration {
   display: grid;
   padding-top: 0;
+}
+
+.how-concetration-block__content {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 4;
+  gap: 20px;
 }
 
 .how-concetration-block {
@@ -234,6 +248,10 @@ body {
 
 .how-concetration-block__heading {
   grid-column: 1 / span 2;
+}
+
+.how-concetration-block__item-heading {
+  font-weight: 400;
 }
 
 .how-concetration-block__list {
@@ -299,6 +317,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   min-height: 768px;
   margin-block-start: 61px;
 }
@@ -306,4 +325,114 @@ body {
 .footer__heading {
   color: var(--color-heading);
   font-size: var(--fz-title);
+}
+
+.page.theme_dark .link:hover {
+  border-bottom: 1px solid var(--link-border-color);
+}
+
+.page.theme_dark .link:focus-visible {
+  border-color: var(--link-border-color);
+}
+
+.page.theme_dark {
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.page.theme_dark .rec-decoration {
+  display: inline;
+}
+
+.page.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button_active {
+  border-color: var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button:focus-visible {
+  border-bottom-color: var(--accent-color);
+}
+
+.page.theme_dark .item-text {
+  color: var(--color-text);
+}
+
+.page.theme_dark .block-heading {
+  color: var(--accent-color);
+}
+
+@media (prefers-color-scheme: light) {
+  .page {
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .rec-decoration {
+    display: none;
+  }
+
+  .link:hover {
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
+  .link:focus-visible {
+    border-color: var(--secondary-color);
+  }
+
+  .item-text {
+    color: var(--secondary-color);
+  }
+
+  .block-heading {
+    color: var(--secondary-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--secondary-color);
+  }
+
+  .header__theme-menu-button_active {
+    border-color: var(--secondary-color);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--secondary-color);
+  }
+}
+
+.page.theme_light {
+  background-image: url(../images/cover-image-light.png);
+}
+
+.page.theme_light .rec-decoration {
+  display: none;
+}
+
+.page.theme_light .link:hover {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.page.theme_light .link:focus-visible {
+  border-color: var(--secondary-color);
+}
+
+.page.theme_light .header__theme-menu-button {
+  color: var(--secondary-color);
+}
+
+.page.theme_light .header__theme-menu-button_active {
+  border-color: var(--secondary-color);
+}
+
+.page.theme_light .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.page.theme_light .item-text {
+  color: var(--secondary-color);
+}
+
+.page.theme_light .block-heading {
+  color: var(--secondary-color);
 }

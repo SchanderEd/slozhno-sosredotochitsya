@@ -17,7 +17,7 @@
 
   .header__theme-menu-list {
     flex-direction: column;
-    gap: 13px;
+    gap: 11px;
   }
 
   .header__heading {
@@ -38,12 +38,22 @@
     gap: 24px;
   }
 
+  .how-concetration-block {
+    padding-top: 2px;
+  }
+
+  .how-concetration-block__content {
+    padding-left: 7px;
+  }
+
   .concetration-block__list {
     flex-direction: column;
+    gap: 22px;
   }
 
   .concetration-block__item {
     max-width: 100%;
+    flex-basis: auto;
   }
 
   .concetration-block__heading {
@@ -58,7 +68,6 @@
 
   .how-concetration-block__list {
     gap: 23px;
-    padding-left: 7px;
   }
 
   .content-list-heading {
@@ -126,7 +135,7 @@
 
   .content {
     gap: 56px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
   }
 
   .concetration-block__heading {
@@ -142,6 +151,10 @@
     display: flex;
     flex-direction: column;
     padding-top: 0;
+  }
+
+  .how-concetration-block__content {
+    padding-left: 0;
   }
 
   .how-concetration-block__heading {
